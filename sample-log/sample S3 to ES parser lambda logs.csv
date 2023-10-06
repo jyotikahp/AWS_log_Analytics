@@ -1,0 +1,138 @@
+timestamp,message
+1682988891458,"INIT_START Runtime Version: python:3.9.v19	Runtime Version ARN: arn:aws:lambda:us-west-1::runtime:e73d5f60c4282fb09ce24a6d3fe8997789616f3a53b903f4ed7c9132a58045f6
+"
+1682988891890,"START RequestId: 55d0d608-060b-4441-98da-70b544ce9836 Version: $LATEST
+"
+1682988892071,"[INFO]	2023-05-02T00:54:52.070Z	55d0d608-060b-4441-98da-70b544ce9836	Found credentials in environment variables.
+"
+1682988893890,"[INFO]	2023-05-02T00:54:53.890Z	55d0d608-060b-4441-98da-70b544ce9836	Found credentials in environment variables.
+"
+1682988893890,"[INFO]	2023-05-02T00:54:53.890Z	55d0d608-060b-4441-98da-70b544ce9836	Received event: {
+  ""Records"": [
+    {
+      ""eventVersion"": ""2.1"",
+      ""eventSource"": ""aws:s3"",
+      ""awsRegion"": ""us-west-1"",
+      ""eventTime"": ""2023-05-02T00:54:50.916Z"",
+      ""eventName"": ""ObjectCreated:Copy"",
+      ""userIdentity"": {
+        ""principalId"": ""AWS:AIDASW6HGYI72ZUIZIVCM""
+      },
+      ""requestParameters"": {
+        ""sourceIPAddress"": ""98.33.119.168""
+      },
+      ""responseElements"": {
+        ""x-amz-request-id"": ""6Y46112RM4WD1Y01"",
+        ""x-amz-id-2"": ""/YlXP2Eqxe5vqf/hjMef04W1nOjVG0xp8vyFRJengWkmdtt2UUb2VmB3MN26msKZOHCJCFyJ5Cr9iDEBGP/2VaQZNFctvk6q""
+      },
+      ""s3"": {
+        ""s3SchemaVersion"": ""1.0"",
+        ""configurationId"": ""0d9f4cd3-3aa3-4538-bf4f-a40d90c53ac4"",
+        ""bucket"": {
+          ""name"": ""news-app-bucket"",
+          ""ownerIdentity"": {
+            ""principalId"": ""A1R6178F9O67VZ""
+          },
+          ""arn"": ""arn:aws:s3:::news-app-bucket""
+        },
+        ""object"": {
+          ""key"": ""AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz"",
+          ""size"": 1433,
+          ""eTag"": ""d56b7ae3e7f694b2dd564b0a806c6003"",
+          ""sequencer"": ""0064505F5ACDFFFE10""
+        }
+      }
+    }
+  ]
+}
+"
+1682988893891,"news-app-bucket
+"
+1682988893891,"AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz
+"
+1682988894179,"[INFO]	2023-05-02T00:54:54.178Z	55d0d608-060b-4441-98da-70b544ce9836	SUCCESS: Retrieved object from S3
+"
+1682988894179,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:56:26.662567Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.13:45600 10.0.1.73:32790 0.001 0.108 0.000 302 302 937 769 ""POST http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news/user/login HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c4a-4fe0de8758169f0f1993b2e0"" ""-"" ""-"" 1 2023-05-01T01:56:26.553000Z ""forward"" ""-"" ""-"" ""10.0.1.73:32790"" ""302"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:56:26.662567Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.13', 'client_port': '45600', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.001', 'target_processing_time': '0.108', 'response_processing_time': '0.000', 'elb_status_code': '302'}
+"
+1682988894469,"[INFO]	2023-05-02T00:54:54.464Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988894469,"[INFO]	2023-05-02T00:54:54.469Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': '9f_02YcBHSUlyCZliNPI', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1575, '_primary_term': 1}
+"
+1682988894469,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:56:26.685895Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.13:45600 10.0.1.73:32790 0.000 0.003 0.000 200 200 780 1394 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news/user/login?error HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c4a-2073bde74f248414725e4b72"" ""-"" ""-"" 1 2023-05-01T01:56:26.682000Z ""forward"" ""-"" ""-"" ""10.0.1.73:32790"" ""200"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:56:26.685895Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.13', 'client_port': '45600', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.003', 'response_processing_time': '0.000', 'elb_status_code': '200'}
+"
+1682988894633,"[INFO]	2023-05-02T00:54:54.633Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988894634,"[INFO]	2023-05-02T00:54:54.633Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'D__02YcBHSUlyCZlidSX', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1537, '_primary_term': 1}
+"
+1682988894634,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:56:26.749122Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.13:45600 10.0.1.73:32790 0.000 0.002 0.000 401 401 643 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/favicon.ico HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c4a-4e74dc4e2b3acc0c7f4dadc6"" ""-"" ""-"" 1 2023-05-01T01:56:26.747000Z ""forward"" ""-"" ""-"" ""10.0.1.73:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:56:26.749122Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.13', 'client_port': '45600', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988894810,"[INFO]	2023-05-02T00:54:54.810Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988894810,"[INFO]	2023-05-02T00:54:54.810Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'Hv_02YcBHSUlyCZlitRO', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1587, '_primary_term': 1}
+"
+1682988894810,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:17.726664Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.001 0.006 0.000 401 401 731 757 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c7d-60513e407a3d5b6103365805"" ""-"" ""-"" 1 2023-05-01T01:57:17.720000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:17.726664Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.001', 'target_processing_time': '0.006', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988894980,"[INFO]	2023-05-02T00:54:54.980Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988894989,"[INFO]	2023-05-02T00:54:54.988Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'J__02YcBHSUlyCZlitT9', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1655, '_primary_term': 1}
+"
+1682988895009,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:20.197024Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.004 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c80-4e7eeeb534c4590a59a5f7db"" ""-"" ""-"" 1 2023-05-01T01:57:20.192000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:20.197024Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.004', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988895150,"[INFO]	2023-05-02T00:54:55.150Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988895151,"[INFO]	2023-05-02T00:54:55.150Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'LP_02YcBHSUlyCZli9Si', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1652, '_primary_term': 1}
+"
+1682988895151,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:22.444960Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.002 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c82-72def31d79de21d6768fc522"" ""-"" ""-"" 1 2023-05-01T01:57:22.442000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:22.444960Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988895358,"[INFO]	2023-05-02T00:54:55.357Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988895358,"[INFO]	2023-05-02T00:54:55.358Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'Nv_02YcBHSUlyCZljNRg', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1544, '_primary_term': 1}
+"
+1682988895358,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:24.305296Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.002 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c84-2efc3d53491b4d303dfedaaf"" ""-"" ""-"" 1 2023-05-01T01:57:24.303000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:24.305296Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988895539,"[INFO]	2023-05-02T00:54:55.538Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988895539,"[INFO]	2023-05-02T00:54:55.539Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'av_02YcBHSUlyCZljdQa', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1660, '_primary_term': 1}
+"
+1682988895539,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:25.298946Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.002 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c85-2e6849272278245d6b5c8b3d"" ""-"" ""-"" 1 2023-05-01T01:57:25.297000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:25.298946Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988895728,"[INFO]	2023-05-02T00:54:55.720Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988895729,"[INFO]	2023-05-02T00:54:55.729Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'if_02YcBHSUlyCZljdTA', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1571, '_primary_term': 1}
+"
+1682988895729,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:26.463516Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.002 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c86-416706ea6a33eaa6110e42f4"" ""-"" ""-"" 1 2023-05-01T01:57:26.461000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:26.463516Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988895890,"[INFO]	2023-05-02T00:54:55.890Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988895890,"[INFO]	2023-05-02T00:54:55.890Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'o__02YcBHSUlyCZljtSE', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1685, '_primary_term': 1}
+"
+1682988895891,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:26.855501Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:47927 10.0.0.103:32790 0.000 0.002 0.000 401 401 757 682 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c86-1b6e470141869f8139c7fa3a"" ""-"" ""-"" 1 2023-05-01T01:57:26.853000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""401"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:26.855501Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '47927', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.002', 'response_processing_time': '0.000', 'elb_status_code': '401'}
+"
+1682988896089,"[INFO]	2023-05-02T00:54:56.060Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988896089,"[INFO]	2023-05-02T00:54:56.089Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'tP_02YcBHSUlyCZlj9Q1', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1614, '_primary_term': 1}
+"
+1682988896089,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:29.556872Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:11201 10.0.0.103:32790 0.000 0.004 0.000 200 200 662 1361 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news/user/login HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c89-5351aafe5d6c7c3d1293eb72"" ""-"" ""-"" 1 2023-05-01T01:57:29.552000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""200"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:29.556872Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '11201', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.004', 'response_processing_time': '0.000', 'elb_status_code': '200'}
+"
+1682988896414,"[INFO]	2023-05-02T00:54:56.414Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988896414,"[INFO]	2023-05-02T00:54:56.414Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'yf_02YcBHSUlyCZlj9Tp', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1576, '_primary_term': 1}
+"
+1682988896414,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:46.818762Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:43317 10.0.0.103:32790 0.000 0.110 0.000 302 302 941 769 ""POST http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news/user/login HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c9a-71acfe51317ddce4623cd1b8"" ""-"" ""-"" 1 2023-05-01T01:57:46.708000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""302"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:46.818762Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '43317', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.110', 'response_processing_time': '0.000', 'elb_status_code': '302'}
+"
+1682988896597,"[INFO]	2023-05-02T00:54:56.597Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988896597,"[INFO]	2023-05-02T00:54:56.597Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'HP_02YcBHSUlyCZlkdUy', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1707, '_primary_term': 1}
+"
+1682988896598,"{'objectKey': 'AWSLogs/186711982655/elasticloadbalancing/us-west-1/2023/05/01/186711982655_elasticloadbalancing_us-west-1_app.news-alb.ea1b6dd07aa7c07f_20230501T0200Z_52.52.13.136_18zpbbqg.log.gz', 'createdDate': '2023-05-02 00:54:51+00:00', 'content_type': '', 'content_length': '1433', 'content': 'http 2023-05-01T01:57:46.835612Z app/news-alb/ea1b6dd07aa7c07f 130.65.254.5:43317 10.0.0.103:32790 0.000 0.005 0.000 200 200 774 1394 ""GET http://news-alb-698253920.us-west-1.elb.amazonaws.com:80/news/user/login?error HTTP/1.1"" ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"" - - arn:aws:elasticloadbalancing:us-west-1:186711982655:targetgroup/news-a-Targe-OOCQCKSPDHXD/bb581df1243e19ea ""Root=1-644f1c9a-264970a47af267cc7ffdde62"" ""-"" ""-"" 1 2023-05-01T01:57:46.830000Z ""forward"" ""-"" ""-"" ""10.0.0.103:32790"" ""200"" ""-"" ""-""', 'type': 'http', 'timestamp': '2023-05-01T01:57:46.835612Z', 'elb': 'app/news-alb/ea1b6dd07aa7c07f', 'client_ip': '130.65.254.5', 'client_port': '43317', 'target_ip': '10.0.1.73', 'target_port': '8080', 'request_processing_time': '0.000', 'target_processing_time': '0.005', 'response_processing_time': '0.000', 'elb_status_code': '200'}
+"
+1682988896770,"[INFO]	2023-05-02T00:54:56.769Z	55d0d608-060b-4441-98da-70b544ce9836	INFO: Successfully inserted element into ES
+"
+1682988896770,"[INFO]	2023-05-02T00:54:56.770Z	55d0d608-060b-4441-98da-70b544ce9836	{'_index': 's3-to-es', '_id': 'QP_02YcBHSUlyCZlkdX0', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 1605, '_primary_term': 1}
+"
+1682988896770,"[INFO]	2023-05-02T00:54:56.770Z	55d0d608-060b-4441-98da-70b544ce9836	File processing comlplete. Check logs for index status
+"
+1682988896809,"END RequestId: 55d0d608-060b-4441-98da-70b544ce9836
+"
+1682988896809,"REPORT RequestId: 55d0d608-060b-4441-98da-70b544ce9836	Duration: 4919.16 ms	Billed Duration: 4920 ms	Memory Size: 128 MB	Max Memory Used: 79 MB	Init Duration: 431.92 ms	
+"
