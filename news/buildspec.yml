@@ -1,0 +1,25 @@
+# SJSU CS 218 SPRING 2023 TEAM4
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 186711982655.dkr.ecr.us-west-1.amazonaws.com
+      - mvn clean
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - mvn package
+      - docker tag cs218_project2_news:0.1.2 186711982655.dkr.ecr.us-west-1.amazonaws.com/cs218_project2_news:latest
+  post_build:
+    commands:
+      - bash -c "if [ /"$CODEBUILD_BUILD_SUCCEEDING/" == /"0/" ]; then exit 1; fi"
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 186711982655.dkr.ecr.us-west-1.amazonaws.com/cs218_project2_news:latest
+      - printf '[{"name":"news-app-container","imageUri":"%s"}]' 186711982655.dkr.ecr.us-west-1.amazonaws.com/cs218_project2_news:latest > imagedefinitions.json
+
+artifacts:
+  files: imagedefinitions.json

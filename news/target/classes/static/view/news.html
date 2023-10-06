@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Search News</title>
+</head>
+<body>
+    <form id="logoutForm" method="POST" action="/news/user/logout">
+    </form>
+    <h2>Welcome <span sec:authentication="name"></span> | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+    <h1>Search News</h1>
+    <form method="GET" action="/news/search">
+        <input type="text" id="keyword" name="keyword" placeholder="keyword">
+        <button type="submit">Search</button>
+    </form>
+    <h1>Search Results</h1>
+    <ul>
+        <li th:each="article : ${list_articles}">
+            <h2 th:text="${article.title}"></h2>
+            <p th:text="${article.description}"></p>
+            <p th:text="${article.publishedAt}"></p>
+            <a th:href="${article.url}" target="_blank"><span th:text="${article.url}"></span></a>
+        </li>
+    </ul>
+</body>
+</html>
