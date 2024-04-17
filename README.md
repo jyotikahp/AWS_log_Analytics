@@ -8,3 +8,4 @@ We aggregate, monitor and visualize the logs published to AWS CloudWatch with AW
 Our other source of logs is AWS CloudTrail, which records all activities in the AWS environment. By default, these logs are aggregated by region and stored in S3 buckets. 
 We created a Lambda to parse the ELB logs stored in S3 so that our logs are indexed (in ElasticSearch) such that they are searchable and aggregatable
 
+# AWS_log_Analytics
